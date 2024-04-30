@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Validation</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <style>
+    /* Form container */
+    form {
+      width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #555;
+      border-radius: 5px;
+      background-color: #333; /* Dark background color */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Form title */
+    .form-title {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #00ffcc; /* Neon green color */
+    }
+
+    /* Form inputs */
+    input[type="text"],
+    input[type="email"],
+    select,
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #444; /* Dark border color */
+      border-radius: 4px;
+      box-sizing: border-box;
+      transition: border-color 0.3s ease;
+      background-color: #666; /* Dark input background color */
+      color: #fff; /* Light text color */
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    select:focus,
+    input[type="password"]:focus {
+      border-color: #00ffcc; /* Neon green focus color */
+    }
+
+    /* Error message style */
+    .error-message {
+      color: red;
+      margin-top: 5px;
+    }
+
+    /* Success message style */
+    .success-message {
+      color: #00ffcc; /* Neon green success color */
+      margin-top: 5px;
+    }
+
+    /* Submit button */
+    button[type="submit"] {
+      background-color: #00ffcc; /* Neon green button color */
+      color: black; /* Text color */
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #007a99; /* Darker neon green on hover */
+    }
+
+    /* Styling for form labels */
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #00ffcc; /* Neon green label color */
+    }
+
+    /* Styling for form container */
+    form {
+      width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #555;
+      border-radius: 5px;
+      background-color: #333; /* Dark background color */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Center the form on the page */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #1a1a1a; /* Darker background color */
+      margin: 0; /* Remove default margin */
+    }
+  </style>
+</head>
+<body>
+  <form action="demo.php" method="post" id="myForm">
+    <div class="form-title">Form Validation</div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" required name="name">
+
+    <label for="phone">Phone number:</label>
+    <input type="text" id="phone" required name="phone">
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" required name="email">
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" required name="password">
+
+    <label for="state" >State:</label>
+    <select id="state" required name="state">
+      <option value="">-- Select State --</option>
+      <option value="Maharashtra">Maharashtra</option>
+      <option value="Karnataka">Karnataka</option>
+      <option value="Gujarat">Gujarat</option>
+    </select>
+
+    <label for="country">Country:</label>
+    <input type="text" id="country" required name="">
+
+    <label for="pincode">Pin code:</label>
+    <input type="text" id="pincode" required name="pincode">
+
+    <button type="submit">Submit</button>
+ 
